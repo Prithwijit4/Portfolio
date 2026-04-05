@@ -1,0 +1,372 @@
+@font-face {
+  font-family: rubik;
+  src: url(../fonts/Rubik-Regular.ttf);
+}
+@font-face {
+  font-family: syne;
+  src: url(../fonts/Syne-Bold.ttf);
+}
+@font-face {
+  font-family: varent;
+  src: url(../fonts/VarentGrotesk-Bold.otf);
+}
+:root {
+  --bg: #1A1A1A;
+  --primary: #FF9142;
+  --wht: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg);
+  color: var(--wht);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  user-select: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+a {
+  text-decoration: none;
+  color: var(--wht);
+  font-family: rubik;
+}
+li {
+  list-style-type: none;
+  font-family: rubik;
+}
+header {
+  width: 100%;
+}
+nav {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  padding: 20px 8%;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(30px);
+  box-shadow: 0px 0px 30px #e3e4ed29;
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  border-radius: 0px 0px 25px 25px;
+  z-index: 999;
+}
+nav h2 {
+  font-family: varent;
+}
+ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+ul li a {
+  border: 2px solid transparent;
+  transition: all 0.4s ease;
+}
+li:hover a {
+  color: var(--primary);
+  border: 2px solid transparent;
+}
+nav .cont-a {
+  font-family: rubik;
+  font-size: .85rem;
+  font-weight: bold;
+  border: 2px solid #5e5e5e;
+  border-radius: 26px;
+  color: var(--wht);
+  padding: 12px 30px;
+  background-color: #0e0e0f;
+  transition: all 0.3s ease;
+}
+nav .cont-a:hover {
+  background-color: var(--primary);
+  color: #000;
+  border: 2px solid transparent;
+  transform: translateY(-3px);
+}
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+main {
+  width: 100%;
+}
+section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 8% 0 8%;
+}
+.hero-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.hero-section .scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 100px;
+  margin-top: 50px;
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  border-radius: 26px;
+  font-size: 2rem;
+}
+.hero-text {
+  width: 100%;
+  font-family: syne;
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  span {
+    font-family: syne;
+    color: var(--primary);
+  }
+}
+.hero-lower-text {
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: auto;
+  padding-top: 200px;
+  h2 {
+    font-family: syne;
+    font-size: 2rem;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--primary);
+  }
+  p {
+    font-family: syne;
+    font-size: 1.2rem;
+  }
+}
+.about-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.about-article {
+  width: 50%;
+  h2 {
+    font-size: 3.2rem;
+    font-family: syne;
+    span{
+      font-family: syne;
+        color: var(--primary);
+      }
+  }
+  h3 {
+    font-family: varent;
+    font-size: 2.2rem;
+    margin: 20px 0px;
+    span {
+      font-family: varent;
+      color: var(--primary);
+    }
+  }
+  p {
+    font-family: rubik;
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+}
+.about-aside {
+  width: 50%;
+  .image {
+    width: 80%;
+    margin-left: auto;
+    position: relative;
+    pointer-events: none;
+    img {
+      width: 100%;
+      border-radius: 26px;
+    }
+  }
+}
+.first-ring {
+  position: absolute;
+  width: 50px;
+  height: 175px;
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  border-radius: 26px;
+  bottom: 90px;
+  left: -30px;
+  z-index: 1;
+}
+.second-ring {
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  border-radius: 26px;
+  top: -30px;
+  right: -5px;
+  z-index: 10;
+}
+.work-section {
+  width: 100%;
+  height: 100%;
+  h2 {
+    text-align: center;
+    font-family: syne;
+    font-size: 3.3rem;
+  }
+  span{
+    font-family: syne;
+    color: var(--primary);
+  }
+}
+.swiper-wrapper {
+  width: 100%;
+  white-space: nowrap;
+}
+.swiper-slide {
+  width: 100%;
+  height: 500px;
+  margin-top: 50px;
+  gap: 10px;
+  display: inline-block;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+  }
+}
+.swiper {
+  width: 100%;
+  margin: 50px auto;
+}
+footer {
+  width: 100%;
+  padding: 80px 8% 20px 8%;
+  background-color: #131313;
+  color: var(--wht);
+}
+.footer-upper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10px;
+  h2 {
+    font-family: varent;
+    font-size: 5rem;
+    span {
+      font-family: varent;
+      color: var(--primary);
+    }
+  }
+  p {
+    margin-top: 10px;
+    font-family: varent;
+    font-size: 1.5rem;
+    span {
+      font-family: varent;
+      color: var(--primary);
+    }
+  }
+}
+.footer-lower {
+  align-items: center;
+  display: block;
+  margin: 70px 0px;
+  h2{
+    font-family: syne;
+    span{
+      color: var(--primary);
+      font-family: syne;
+    }
+  }
+}
+.social-medias {
+  display: flex;
+  align-items: center;
+  margin: 20px 0 20px 0;
+  gap: 25px;
+  .accounts {
+    font-size: 2rem;
+    margin: 0;
+    transition: all 0.3s ease;
+  }
+}
+.accounts:hover {
+  transform: translateY(-5px) scale(1.2);
+  color: var(--primary);
+}
+.conta{
+  margin: 20px 0 20px 0;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  a i{
+    color: var(--primary);
+  }
+}
+.conta:hover{
+  transform: translateY(-5px) scale(1);
+}
+.conta a:hover{
+  color: var(--primary);
+}
+.conta a i:hover{
+  color: var(--wht);
+}
+.c-rights {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0 0 0;
+  font-family: rubik;
+}
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.6s ease, visibility 0.6s;
+}
+.loader h1 {
+  font-family: syne;
+  font-size: 2rem;
+  color: var(--primary);
+  letter-spacing: 2px;
+}
+.loader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+.loader h1 {
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
